@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.TopSlider {
+    position: relative;
+    /* width: 80%; */
+    width: 100%;
+    height: 90vh;
+    margin: auto;
+}
+
+.TopSlider img {
+    width: 50%;
+}
+
+.TopSlider::after {
+    content: '';
+    position: absolute;
+    width: 100vw;
+    max-width: 100vw;
+    height: 100%;
+    top: 0;
+    /* left: -11.5vw; */
+    left: 0;
+    background-color: black;
+    opacity: .5;
+}
+
+.movieCard {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.movieCard img {
+    width: 50%;
+    height: 100%;
+}
+
+.movieCard .title {
+    position: absolute;
+    z-index: 100;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+}
+
+.controllers span {
+    position: absolute;
+    z-index: 100;
+    top: 40%;
+    font-size: 35px;
+    background-color: none;
+    cursor: pointer;
+}
+
+.controllers span.left {
+    left: 3%;
+}
+
+.controllers span.right {
+    right: 3%;
+}

@@ -1,0 +1,53 @@
+.movieList {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 10px;
+    grid-row-gap: 15px;
+}
+
+.movieList .movieCard {
+    transition: .5s;
+    position: relative;
+    width: 100%;
+}
+
+.movieList .movieCard img {
+    width: 100%;
+}
+
+.movieList .movieCard:hover {
+    transform: scale(1.1);
+}
+
+.movieList .movieCard::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: black;
+    top: 0;
+    left: 0;
+    opacity: .3;
+}
+
+.movieList .movieCard .title {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    z-index: 1;
+}
+
+.movieList .movieCard .rate {
+    color: yellow;
+    position: absolute;
+    right: 5%;
+    top: 0;
+    z-index: 1;
+    font-weight: bolder;
+}
+
+.rate .stars {
+    color: yellow;
+}

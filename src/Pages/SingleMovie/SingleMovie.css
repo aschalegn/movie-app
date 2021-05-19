@@ -1,0 +1,48 @@
+.singleMovie {
+    width: 90%;
+    margin: auto;
+    padding-bottom: 20px;
+}
+
+.detail {
+    display: flex;
+    margin-top: 30px;
+}
+
+.detail img {}
+
+.detail div {
+    width: 70%;
+    padding-left: 3%;
+    align-self: center;
+}
+
+@media screen and (max-width: 769px) {
+    .singleMovie {
+        width: 99%;
+    }
+    .detail {
+        flex-direction: column;
+    }
+    .detail img {
+        width: 70%;
+        margin: auto;
+    }
+    .detail div {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .singleMovie {
+        width: 99%;
+    }
+   
+    .detail img {
+        width: 70%;
+        margin: auto;
+    }
+    .detail div {
+        width: 95%;
+    }
+}

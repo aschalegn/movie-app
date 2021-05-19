@@ -1,0 +1,21 @@
+.pagination {
+    width: 70%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+}
+
+.pagination button {
+    padding: 15px;
+    margin-left: 2px;
+    background-color: blue;
+    border: none;
+    outline: none;
+    transition: .75s;
+}
+
+.pagination button:hover {
+    transform: scale(1.1);
+    background: teal;
+    margin: 0 5px;
+}

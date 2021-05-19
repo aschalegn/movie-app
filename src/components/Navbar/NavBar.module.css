@@ -1,0 +1,65 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.NavBar {
+    width: 100%;
+    height: 50px;
+}
+
+.mainNav {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-color: yellowgreen;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mainNav li {
+    list-style-type: none;
+}
+
+.mainNav li:last-child {
+    font-size: 20px;
+}
+
+.mainNav .openBtn {
+    margin-right: 15px;
+    margin-left: 5px;
+    background-color: purple;
+    padding: 10px;
+    border: none;
+}
+
+.link, .link:hover {
+    color: white;
+    text-decoration: none;
+    font-size: 26px;
+}
+
+.SideNavBar {
+    position: fixed;
+    width: 150px;
+    height: 100vh;
+    top: 0;
+    background-color: rgb(24, 21, 21);
+    z-index: 5000;
+}
+
+.SideNavBar a {
+    color: white;
+    text-decoration: none;
+    margin-left: 10px;
+    line-height: 2;
+    font-size: 18px;
+}
+
+.SideNavBar span {
+    margin-left: 80%;
+    color: red;
+    border: none;
+    outline: none;
+    font-size: 20px;
+}
