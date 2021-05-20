@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect} from 'react';
 import { getByCategory } from "../apis";
 import { Link, useParams } from 'react-router-dom';
 import MovieCard from '../components/MovieCard';

@@ -41,7 +41,7 @@
     transform: scale(1.1);
 }
 
-.movieCard::after {
+/* .movieCard::after {
     content: '';
     position: absolute;
     width: 100%;
@@ -49,6 +49,10 @@
     background-color: black;
     top: 0;
     opacity: .1;
+} */
+
+.movieTitle {
+    word-wrap: break-word;
 }
 
 .movieCard img {

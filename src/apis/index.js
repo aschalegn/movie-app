@@ -42,13 +42,14 @@ const getVideos = async (id) => {
     return videos.results;
 }
 
-
-const searchMovie = () => { 
-    
+const searchMovies = async (query, page = 1) => {
+    const res = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${query}&page=${page}`)
+    const data = await res.json();
+    return data.results;
 }
 
 export {
     getPopulars, getMovie, getVideos,
     getActors, getSingleActor,
-    getCrew, getByCategory
+    getCrew, getByCategory, searchMovies
 };
