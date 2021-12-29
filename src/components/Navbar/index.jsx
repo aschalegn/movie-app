@@ -16,11 +16,11 @@ export default function NavBarComp({ search, setSearch, searchTerm, setSearchTer
           </li>
           {search ? "" : ""}
           <Search
-            // search={search}
-            // setSearch={setSearch}
-            // searchTerm={searchTerm}
-            // setSearchTerm={setSearchTerm}
-            // searchForMovies={searchForMovies}
+            search={search}
+            setSearch={setSearch}
+            searchTerm={searchTerm}
+            setSearchTerm={setSearchTerm}
+            searchForMovies={searchForMovies}
           />
         </ul>
         <ul>

@@ -36,11 +36,11 @@ const App = () => {
       <Router>
          <header>
             <NavBarComp
-            // search={search}
-            // setSearch={setSearch}
-            // searchTerm={searchTerm}
-            // setSearchTerm={setSearchTerm}
-            // searchForMovies={searchForMovies}
+            search={search}
+            setSearch={setSearch}
+            searchTerm={searchTerm}
+            setSearchTerm={setSearchTerm}
+            searchForMovies={searchForMovies}
             />
          </header>
          <main>
@@ -50,15 +50,16 @@ const App = () => {
                </Route>
                <Route exact path='/category/:category/:id' component={Category} />
                <Route exact path="/movie/:id" component={SingleMovie} />
-               <Route exact path='/search/:query' component={SearchResult}
-               // render={(props) =>
-               //    <SearchResult {...props}
-               //       page={page}
-               //       setPage={setPage}
-               //       searchResult={searchResult}
-               //       searchTerm={searchTerm}
-               //       setSearchTerm={setSearchTerm}
-               //    />}
+               <Route exact path='/search/:query'
+                  // component={SearchResult}
+                  render={(props) =>
+                     <SearchResult {...props}
+                        page={page}
+                        setPage={setPage}
+                        searchResult={searchResult}
+                        searchTerm={searchTerm}
+                        setSearchTerm={setSearchTerm}
+                     />}
                />
             </Switch>
          </main>
