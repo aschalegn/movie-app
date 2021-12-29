@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import * as style from './NavBar.module.css';
-import { Link, useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import SideNavBar from './SideNavBar';
 import Search from '../Search';
 
@@ -16,11 +16,11 @@ export default function NavBarComp({ search, setSearch, searchTerm, setSearchTer
           </li>
           {search ? "" : ""}
           <Search
-            search={search}
-            setSearch={setSearch}
-            searchTerm={searchTerm}
-            setSearchTerm={setSearchTerm}
-            searchForMovies={searchForMovies}
+            // search={search}
+            // setSearch={setSearch}
+            // searchTerm={searchTerm}
+            // setSearchTerm={setSearchTerm}
+            // searchForMovies={searchForMovies}
           />
         </ul>
         <ul>

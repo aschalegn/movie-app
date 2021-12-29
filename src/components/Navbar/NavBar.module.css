@@ -6,15 +6,23 @@
 .NavBar {
     width: 100%;
     height: 50px;
+    /* position: sticky; */
+    top: 0;
+    left: 0;
+    background-color: rgb(85, 85, 85);
 }
 
 .mainNav {
     width: 100%;
     height: 100%;
     display: flex;
-    background-color: yellowgreen;
     justify-content: space-between;
     align-items: center;
+    /* position: sticky;
+    top: 0;
+    left: 0; */
+    background-color: #383333;
+
 }
 
 .mainNav li {
@@ -44,7 +52,7 @@
     width: 150px;
     height: 100vh;
     top: 0;
-    background-color: rgb(24, 21, 21);
+    background-color: #181515;
     z-index: 5000;
 }
 

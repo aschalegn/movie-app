@@ -19,13 +19,11 @@ const Search = ({ searchTerm, setSearchTerm, searchForMovies }) => {
                     setSearchTerm(e.target.value);
                 }} />
             </form>
-
             {isSearched ?
                 <Redirect to={`/search/${searchTerm}`} />
                 : ''}
-
         </div>
-    )
+    );
 }
 
 export default Search;

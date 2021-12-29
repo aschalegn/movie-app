@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import { getByCategory } from "../apis";
 import { Link, useParams } from 'react-router-dom';
 import MovieCard from '../components/MovieCard';
@@ -15,11 +15,12 @@ export default function Category() {
     }, [id]);
 
     const getMovies = (page = 1) => {
-        getByCategory(id, page).then(res => {
-            const { movies, total } = res;
-            setMovies(movies);
-            setTotalPages(total);
-        });
+        getByCategory(id, page)
+            .then(res => {
+                const { movies, total } = res;
+                setMovies(movies);
+                setTotalPages(total);
+            });
     };
 
     return (
