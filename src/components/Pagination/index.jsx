@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import "./Pagination.css";
 
-export default function Pagination({ totalPages, getMovies }) {
+export default function Pagination({ totalPages, getMovies, page }) {
     const [max, setMax] = useState([]);
     const [active, setActive] = useState("active");
     const perPage = 20;
+
     const calculateMax = () => {
         let temp = [];
-        for (let i = 1; i <= totalPages / perPage; i++) {
+        for (let i = page; i <= page + 9; i++) {
             temp.push(i);
         };
         setMax(temp);
@@ -15,7 +16,7 @@ export default function Pagination({ totalPages, getMovies }) {
 
     useEffect(() => {
         calculateMax();
-    }, [totalPages]);
+    }, [totalPages, page]);
 
     const goToPage = page => {
         getMovies(page);
@@ -23,9 +24,29 @@ export default function Pagination({ totalPages, getMovies }) {
 
     return (
         <div className="pagination">
-            {max.map(n => {
-                return <button key={n} onClick={() => { goToPage(n) }} className={active}>{n}</button>
-            })}
+            <button className="prev"
+                onClick={() => {
+                    if (page > 0) goToPage(page - 1);
+                }}>
+                Prev</button>
+            {
+                max.map(n => {
+                    return (
+                        <button key={n}
+                            onClick={() => { goToPage(n) }}
+                            className={active}
+                        >
+                            {n}
+                        </button>
+                    )
+                })
+            }
+
+            <button className="prev"
+                onClick={() => {
+                    if (page < totalPages) goToPage(page + 1);
+                }}>
+                Next</button>
         </div >
     )
 }

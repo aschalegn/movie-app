@@ -1,8 +1,15 @@
+.categoryName{
+    text-align: center;
+    padding: 20px;
+}
+
 .movieList {
     width: 90%;
     margin: auto;
     display: grid;
+    display: -ms-grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    -ms-grid-columns: repeat(auto-fill, minmax(200px, 1fr));
     grid-gap: 10px;
     grid-row-gap: 15px;
 }

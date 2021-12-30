@@ -1,39 +1,48 @@
 import React, { useState } from 'react'
 import './Search.css';
 import { Redirect } from 'react-router-dom';
-import { searchMovies } from '../../apis';
+// import { searchMovies } from '../../apis';
 import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
-const Search = ({ searchTerm, setSearchTerm, searchForMovies }) => {
+const Search = () => {
     const [isSearched, setIsSearched] = useState(false);
     const [isSearching, setIsSearching] = useState(false);
-
+    const [term, setTerm] = useState('');
+    const location = useLocation();
     const searchMovie = (e) => {
-        searchForMovies();
         setIsSearched(true);
     }
 
     useEffect(() => {
-        const tin = setInterval(() => {
-            searchMovie(searchTerm);
-        }, 500);
+        console.log(term);
+        var newurl =
+            window.location.protocol + "//" +
+            window.location.host +
+            window.location.pathname + `?query=${term}`;
+            
+        window.history.replaceState({ path: newurl }, "", newurl);
+        const searchParams = new URLSearchParams(location.search);
+        const query = searchParams.get("query");
+        console.log(query);
+        // search
+        // window.history.pushState({ path: newurl }, '', newurl);
 
-        return () => {
-            clearInterval(tin)
-        };
-    }, [searchTerm]);
+    }, [term]);
 
     return (
-        <div className="SearchBar" >
-            <form>
-                <input type="text"
-                    placeholder="Search"
-                    className="mr-sm-2"
-                    onChange={(e) => {
-                        setSearchTerm(e.target.value);
-                    }}
-                />
-            </form>
+        <div className="SearchBar"
+            style={{ color: "black" }}
+        >
+            <input type="text"
+                placeholder="Search"
+                className="mr-sm-2"
+                onChange={(e) => {
+                    setTerm(e.target.value);
+                }}
+            />
+            <button type="button" onClick={searchMovie}>Search</button>
+            {/* {isSearched ? <Redirect to={`search/${term}`} /> : ""} */}
         </div>
     );
 }

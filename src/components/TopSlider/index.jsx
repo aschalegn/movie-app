@@ -6,6 +6,7 @@ export default function TopSlider() {
     const [populars, setPopulars] = useState([]);
     const [currentId, setCurrentId] = useState(0)
     const [movie, setMovie] = useState(populars[currentId]);
+    
     useEffect(() => {
         getPopulars().then(res => {
             const pop = [];

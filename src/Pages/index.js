@@ -3,8 +3,8 @@ import Home from '../components/Home'
 
 export default function Index({page}) {
     return (
-        <div>
+        <>
             <Home />
-        </div>
+        </>
     )
 }

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import NavBarComp from './components/Navbar';
 import Category from './Pages/Category.jsx';
-import Popular from './components/Popular';
+// import Popular from './components/Popular';
 import SearchResult from './components/Search/SearchResult.jsx';
 import Index from './Pages';
 import "./css/index.css";
@@ -16,10 +16,11 @@ const App = () => {
    const [searchResult, setSearchResult] = useState([]);
 
    const searchForMovies = () => {
-      searchMovies(searchTerm, page).then(results => {
-         console.log(results);
-         setSearchResult(results)
-      });
+      searchMovies(searchTerm, page)
+         .then(results => {
+            console.log(results);
+            setSearchResult(results)
+         });
    }
 
    useEffect(() => {
@@ -36,11 +37,11 @@ const App = () => {
       <Router>
          <header>
             <NavBarComp
-            search={search}
-            setSearch={setSearch}
-            searchTerm={searchTerm}
-            setSearchTerm={setSearchTerm}
-            searchForMovies={searchForMovies}
+               search={search}
+               setSearch={setSearch}
+               searchTerm={searchTerm}
+               setSearchTerm={setSearchTerm}
+               searchForMovies={searchForMovies}
             />
          </header>
          <main>

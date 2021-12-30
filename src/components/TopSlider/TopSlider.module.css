@@ -42,7 +42,7 @@
 .movieCard .title {
     position: absolute;
     z-index: 100;
-    top: 20%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -20%);
 }

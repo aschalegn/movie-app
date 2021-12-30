@@ -2,12 +2,14 @@
     padding-right: 3%;
 }
 
-.SearchBar form input {
-    background-color: lightgray;
+.SearchBar  input {
+    color: black;
     border: none;
     outline: none;
 }
-
+.SearchBar button{
+    color: black;
+}
 .searchResultContainer {
     display: flex;
     flex-wrap: wrap;

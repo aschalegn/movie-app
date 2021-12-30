@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { getByCategory } from "../../apis";
 import * as style from "./Category.module.css";
 import MovieCard from './MovieCard';
+
 export default function Category({ id, category }) {
     const [movies, setMovies] = useState([]);
     useEffect(() => {
@@ -10,6 +11,7 @@ export default function Category({ id, category }) {
             .then(res => setMovies(res.movies));
     }, []);
     const sliderRef = useRef();
+    
     const prev = () => {
         const slider = sliderRef.current;
         slider.scrollLeft -= slider.offsetWidth;

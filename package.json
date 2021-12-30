@@ -12,12 +12,17 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "^3.4.3"
   },
+  
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install  && npm run build --prefix"
+  },
+  "engines": {
+    "npm": "6.14.12",
+    "node": "14.16.1" 
   },
   "eslintConfig": {
     "extends": "react-app"
